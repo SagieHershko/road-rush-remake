@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b12" />
+    <title>Road Rush 3D</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="c"></canvas>
+
+      <div id="hud" hidden>
+        <div class="hud-tl">
+          <div class="hud-name" id="h-name">Player_1</div>
+          <div class="bar stamina"><i id="h-stamina"></i></div>
+          <div class="hud-row"><span class="tag">BIKE</span><div class="bar damage"><i id="h-damage"></i></div></div>
+          <div class="hud-row"><span class="tag">NOS</span><div class="bar nitro"><i id="h-nitro"></i></div></div>
+          <div class="hud-weapon" id="h-weapon"></div>
+        </div>
+        <div class="hud-top">
+          <div class="rank" id="h-rank">8<sup>th</sup></div>
+          <div class="progress" id="h-progress"></div>
+        </div>
+        <div class="hud-tr">
+          <div class="timer" id="h-time">0:00.0</div>
+          <div class="cash" id="h-cash"></div>
+          <div class="lvl" id="h-level"></div>
+        </div>
+        <div class="hud-bl">
+          <div class="speedo">
+            <svg viewBox="0 0 120 120" width="120" height="120">
+              <circle cx="60" cy="60" r="56" fill="#0b0b12" stroke="#ffd400" stroke-width="3" />
+              <g id="h-ticks" stroke="#e8e8e8" stroke-width="2"></g>
+              <line id="h-needle" x1="60" y1="60" x2="60" y2="18" stroke="#ff3b2f" stroke-width="3" stroke-linecap="round" transform="rotate(-135 60 60)" />
+              <circle cx="60" cy="60" r="5" fill="#ffd400" />
+            </svg>
+          </div>
+          <div class="digital">
+            <div class="compass" id="h-compass">N</div>
+            <div class="mph"><span id="h-speed">000</span><small>MPH</small></div>
+          </div>
+        </div>
+        <div class="vignette" id="h-vignette"></div>
+      </div>
+
+      <div id="toast"></div>
+      <div id="countdown"></div>
+
+      <div id="touch" hidden>
+        <div class="t-left">
+          <button class="tbtn" id="t-left">◀</button>
+          <button class="tbtn" id="t-right">▶</button>
+        </div>
+        <div class="t-mid">
+          <button class="tbtn punch" id="t-pl">👊L</button>
+          <button class="tbtn punch" id="t-pr">R👊</button>
+        </div>
+        <div class="t-right">
+          <button class="tbtn nitro" id="t-nitro">NOS</button>
+          <button class="tbtn brake" id="t-brake">⏹</button>
+          <button class="tbtn gas" id="t-gas">GAS</button>
+        </div>
+      </div>
+
+      <div id="screen"></div>
+      <div id="loading">LOADING…</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
